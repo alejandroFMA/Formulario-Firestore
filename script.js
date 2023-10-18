@@ -34,16 +34,14 @@ const printUser = (coleccionUsuarios, docId) => {
   datos.appendChild(id);
 };
 
-/*const createUser = (coleccionUsuarios) => {
-
-  const borrar =  id.setAttribute("class", "innerId")
+const createUser = (coleccionUsuarios) => {
   db.collection("datos")
     .add(coleccionUsuarios)
     .then((docRef) => {
       console.log("Document written with ID: ", docRef.id)
     })
     .catch((error) => console.error("Error adding document: ", error));
-}*/
+}
 
 
 let form =document.querySelector("form")
@@ -100,6 +98,16 @@ const deleteUsers = () => {
   });
 };
 
+const deleteOne = () => {
+  const id = prompt('Introduce el ID a borrar');
+  db.collection('datos').doc(id).delete().then(() => {
+    alert(`Documento ${id} ha sido borrado`);
+    document.getElementById('album').innerHTML = "";
+    readAll();
+  })
+    .catch(() => console.log('Error borrando documento'));
+};
+
 
 document.getElementById("read-all").addEventListener("click", () => {
   readAll();
@@ -107,4 +115,8 @@ document.getElementById("read-all").addEventListener("click", () => {
 
 document.getElementById('delete').addEventListener('click', () => {
   deleteUsers();
+});
+
+document.getElementById('delete-one').addEventListener('click', () => {
+  deleteOne();
 });
