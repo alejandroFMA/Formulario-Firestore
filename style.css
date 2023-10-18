@@ -1,0 +1,62 @@
+*{
+    box-sizing: border-box;
+}
+  
+html {
+      scroll-behavior: smooth;
+      font-size: 15px;
+}
+
+body {
+    margin: 0;
+    background-color: #bb6da8;
+}
+
+main{
+    background-color: rgba(157, 206, 248, 0.476);
+    width:70vw;
+    margin: 5%  auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+}
+
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    font-size: 1.2rem;
+}
+
+#btn-submit{
+    background-color: #c227ff;
+    padding: 0.45em;
+    margin :0.45em auto;
+    border-radius: 0.25em;
+    font-size: 1.5rem;
+}
+
+#btn-submit:active{
+    background-color: #831183;
+}
+
+button{
+    background-color: #d392ec;
+    padding: 0.45em;
+    margin :0.6em 0.5em;
+    border-radius: 0.25em;
+    font-size: 1.5rem;
+}
+
+button:active{
+    background-color: #b04ab0f0;
+}
